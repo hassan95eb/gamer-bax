@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import MainHeader from "./components/MainHeader";
 
 const vazirFont = localFont({
     src: "./fonts/Vazirmatn-VariableFont_wght.ttf",
@@ -22,6 +23,7 @@ export default function RootLayout({
             <body
                 className={`${vazirFont.className} ${vazirFont.variable}`}
             >
+                <MainHeader />
                 {children}
             </body>
         </html>

@@ -17,16 +17,16 @@ export default function MainHeader() {
                         </span>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    {/* <div className="hidden md:flex items-center space-x-8">
                         <Link
-                            href="#"
+                            href="/"
                             className="text-text hover:text-border font-medium transition-colors duration-200 relative group"
                         >
                             خانه
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-border transition-all duration-300 group-hover:w-full"></span>
                         </Link>
                         <Link
-                            href="#"
+                            href="/blog"
                             className="text-text hover:text-border font-medium transition-colors duration-200 relative group"
                         >
                             بلاگ
@@ -46,9 +46,9 @@ export default function MainHeader() {
                             درباره ما
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-border transition-all duration-300 group-hover:w-full"></span>
                         </Link>
-                    </div>
+                    </div> */}
 
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center  space-x-4">
                         <Link href="#">
                             <button className="hidden md:block bg-linear-to-r from-btn to-btn/80 text-text px-6 py-2 rounded-full font-medium hover:from-btn/90 hover:to-btn/70 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
                                 عضویت
@@ -56,7 +56,7 @@ export default function MainHeader() {
                         </Link>
 
                         <button
-                            className="md:hidden p-2 rounded-lg text-text hover:bg-border/10 transition-colors duration-200"
+                            className="md:hidden p-2 rounded-lg text-text hover:bg-btn/10 transition-colors duration-200"
                             onClick={() =>
                                 setIsMenuOpen(!isMenuOpen)
                             }
@@ -85,15 +85,15 @@ export default function MainHeader() {
                             : "translate-x-full"
                     }`}
                 >
-                    <div className="px-4 py-6 space-y-4">
+                    <div className="px-4 py-6 space-y-4 text-center">
                         <Link
-                            href="#"
+                            href="/"
                             className="block text-text hover:text-border font-medium py-2 transition-colors duration-200"
                         >
                             خانه
                         </Link>
                         <Link
-                            href="#"
+                            href="/blog"
                             className="block text-text hover:text-border font-medium py-2 transition-colors duration-200"
                         >
                             بلاگ
@@ -112,7 +112,7 @@ export default function MainHeader() {
                         </Link>
 
                         <Link href="#">
-                            <button className="w-full bg-linear-to-r from-border to-border/80 text-background px-6 py-3 rounded-full font-medium hover:from-border/90 hover:to-border/70 transition-all duration-300 shadow-lg mt-4">
+                            <button className="w-2/3 bg-linear-to-r from-btn to-btn/80 text-text px-6 py-3 rounded-full font-medium hover:from-btn/90 hover:to-btn/70 transition-all duration-300 shadow-lg mt-4">
                                 عضویت
                             </button>
                         </Link>

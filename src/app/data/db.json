@@ -1,0 +1,24 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "خانه",
+            "link": "/home"
+        },
+        {
+            "id": 2,
+            "name": "بلاک",
+            "link": "/blog"
+        },
+        {
+            "id": 4,
+            "name": "تماس با ما",
+            "link": "/contact"
+        },
+        {
+            "id": 3,
+            "name": "خدمات",
+            "link": "/services"
+        }
+    ]
+}

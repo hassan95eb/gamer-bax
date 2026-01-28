@@ -17,8 +17,8 @@
         },
         {
             "id": 3,
-            "name": "خدمات",
-            "link": "/services"
+            "name": "فروشگاه",
+            "link": "/store"
         }
     ]
 }

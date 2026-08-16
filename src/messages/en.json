@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "Gamer Bax",
+    "description": "Bilingual gaming blog and instrument-grade journal."
+  },
+  "nav": {
+    "home": "Home",
+    "styleguide": "Style Guide",
+    "blog": "Articles",
+    "about": "About",
+    "cta": "Subscribe"
+  },
+  "footer": {
+    "description": "Gamer Bax is a technical, quiet gaming journal dedicated to deep-dive analysis, gaming culture, and hardware engineering.",
+    "rights": "All rights reserved.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "readMore": "Read More",
+    "explore": "Explore Signal",
+    "openMenu": "Open Navigation Menu",
+    "closeMenu": "Close Navigation Menu"
+  },
+  "hero": {
+    "eyebrow": "SIGNAL // SYSTEM v1.0",
+    "headingPrefix": "Precision Engineering for ",
+    "headingAccent": "Modern Gaming",
+    "headingSuffix": " Culture",
+    "description": "A quiet, technical publication focusing on architecture, ludology, and gaming gear.",
+    "cta": "View Style Guide"
+  },
+  "cards": {
+    "card1": {
+      "monoIndex": "01",
+      "monoLabel": "ARCH // LUDOLOGY",
+      "title": "Level Design in Systems",
+      "description": "An analysis of environmental storytelling in modern immersive sims.",
+      "tag": "ANALYSIS"
+    },
+    "card2": {
+      "monoIndex": "02",
+      "monoLabel": "HARDWARE // PERF",
+      "title": "Frametime Consistency",
+      "description": "Why peak FPS is a misleading metric for gaming experience.",
+      "tag": "HARDWARE"
+    },
+    "card3": {
+      "monoIndex": "03",
+      "monoLabel": "CULTURE // ESSAY",
+      "title": "The Preservation Dilemma",
+      "description": "How modern live-service architectures threaten gaming history.",
+      "tag": "ESSAY"
+    }
+  },
+  "styleguide": {
+    "title": "Design System Style Guide",
+    "subtitle": "Interactive showcase of design tokens, typography scale, and UI primitives.",
+    "colorTokens": "Color Tokens",
+    "typography": "Typography Scale",
+    "components": "UI Primitives",
+    "buttons": "Button Variants",
+    "cards": "Card Components",
+    "inputs": "Form Controls",
+    "tags": "Tag Variants",
+    "dividers": "Signal Dividers"
+  }
+}

@@ -1,23 +1,146 @@
 @import "tailwindcss";
 
-:root {
-    --background: #0b0e11;
-    --text: #f5f5f5;
-    --border: #00f0ff;
-    --shadow: #ff5c00;
-    --btn: #ff5c00;
-}
-
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-border: var(--border);
-    --color-text: var(--text);
-    --color-shadow: var(--shadow);
-    --color-btn: var(--btn);
+  --color-bg: #080B08;
+  --color-bg-deep: #050705;
+  --color-surface: #0E140D;
+  --color-surface-2: #121A10;
+  --color-border: #1D2A1B;
+  --color-border-strong: #2A3B26;
+  --color-text: #EDF1E8;
+  --color-text-muted: #8E9B88;
+  --color-text-dim: #5E6A59;
+  --color-accent: #C8E870;
+  --color-accent-dim: #9DB84F;
+  --color-glow: #163312;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --font-display: var(--font-inter-tight), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
+/* Base styles & reset */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Locale font family overrides */
+html[lang="fa"] {
+  font-family: var(--font-vazirmatn), sans-serif;
+}
+
+/* Critical Persian typography rules - DO NOT VIOLATE */
+html[lang="fa"] * {
+  letter-spacing: normal !important;
+}
+
+/* Do not transform Persian text to uppercase */
+html[lang="fa"] .uppercase,
+html[lang="fa"] [class*="uppercase"] {
+  text-transform: none !important;
+}
+
+/* Typography styles */
+.text-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+html[lang="fa"] .text-display {
+  font-family: var(--font-vazirmatn);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.text-h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+html[lang="fa"] .text-h2 {
+  line-height: 1.35;
+}
+
+.text-h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+html[lang="fa"] .text-h3 {
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+html[lang="fa"] .text-body {
+  line-height: 1.85;
+}
+
+.text-small {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+html[lang="fa"] .text-small {
+  line-height: 1.7;
+}
+
+.text-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.text-mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+html[lang="en"] .text-mono-label {
+  letter-spacing: 0.18em;
+}
+
+/* Focus style */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Card gradient utility */
+.card-surface {
+  background: linear-gradient(180deg, var(--color-surface-2) 0%, var(--color-surface) 100%);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -29,11 +29,12 @@ This repository hosts **Gamer Bax**, a technical, bilingual (`fa` RTL default an
 5. **Accent is Rare**: Use `--color-accent` sparingly (maximum 1 CTA, active nav state, single highlighted display heading phrase, or small eyebrow per screen). Never use full-width accent blocks or accent body text.
 6. **No Duplicated Navigation DOM**: The application header uses a single `<nav>` element for both desktop and mobile views. The mobile menu is an overlay styled on the same `<nav>` container.
 7. **Accessibility & Focus**: All interactive elements must remain reachable via keyboard and display a visible focus ring (`:focus-visible`).
+8. **Dependency and Lockfile Synchronicity**: `package.json` and `pnpm-lock.yaml` must always change in the same commit. After adding or removing any dependency, run `pnpm install` and commit the regenerated lockfile. Vercel installs with `--frozen-lockfile` and the build will fail otherwise.
 
 ---
 
 ## Validation Commands
 
 Before committing or completing any step, verify with:
-- `npm run check:i18n` — Validates that key sets in `src/messages/fa.json` and `src/messages/en.json` match identically.
-- `npm run build` — Runs `prebuild` (which triggers `check:i18n`), checks TypeScript types, and confirms static generation of all bilingual routes.
+- `pnpm run check:i18n` — Validates that key sets in `src/messages/fa.json` and `src/messages/en.json` match identically.
+- `pnpm run build` — Runs `prebuild` (which triggers `check:i18n`), checks TypeScript types, and confirms static generation of all bilingual routes.

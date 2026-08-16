@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 
-function getKeys(obj: Record<string, unknown>, prefix = ''): string[] {
-  let keys: string[] = [];
+function getKeys(obj, prefix = '') {
+  let keys = [];
   for (const key of Object.keys(obj)) {
     const fullPath = prefix ? `${prefix}.${key}` : key;
     const value = obj[key];
     if (value && typeof value === 'object' && !Array.isArray(value)) {
-      keys = keys.concat(getKeys(value as Record<string, unknown>, fullPath));
+      keys = keys.concat(getKeys(value, fullPath));
     } else {
       keys.push(fullPath);
     }
